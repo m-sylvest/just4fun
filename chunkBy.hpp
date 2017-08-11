@@ -14,7 +14,7 @@ std::vector<std::vector<int>> chunkBy(std::vector<int> &in, int count)
 		{
 			std::vector<std::vector<int>> more = chunkBy(in, count);
 			result.resize( 1 + more.size() );
-			copy(more.begin(), more.end(), result.end());
+			copy(more.begin(), more.end(), result.begin()+1);
 		}
 	}
 	return result;
